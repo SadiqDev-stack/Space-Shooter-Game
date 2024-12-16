@@ -126,7 +126,7 @@ const resetGame = e => {
         
         ctx.clearRect(0, 0, cw, ch)
         speed = Game.speed;
-        Game.currentRound = 5
+        Game.currentRound = 1
         Game.distance = 0;
         Game.ended = true;
         previousTime = 0;
