@@ -1,0 +1,362 @@
+html{
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: SadiqCyber;
+  src: url(SadiqCyberFont.ttf);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #FFF url(./frames/bgFrame.png) 0 0 no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    margin: 0;
+    user-select: none;
+    font-family: SadiqCyber;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.section{
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+}
+
+img{
+  width: 70%;
+}
+
+
+.gameHome .actions{
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
+}
+
+.gameHome h2{
+  font-size: 1.5rem;
+}
+
+.gameHome .actions *{
+  width: 80%;
+  border: none;
+  border-radius: 15px;
+  margin-top: 1rem;
+  padding: .7rem;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.play{
+  background: #15BE37;
+}
+
+.close{
+  background: red;
+}
+
+
+
+.dev{
+  font-size: .7rem;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.gameHome,.gameLoader{
+  justify-content: space-around;
+}
+
+.gameLoader .loader{
+  width: 90%;
+  height: 2rem;
+  border: 2px solid #66ECFF;
+ }
+
+
+.gameField nav{
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: .85rem;
+  animation: null .5s 0s forwards;
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+@keyframes hide{
+  to{
+    transform: scaleY(0);
+  }
+}
+
+
+@keyframes show{
+  to{
+    transform: scaleY(1);
+  }
+}
+
+.gameField canvas,.distDisplay,.stateDisplay{
+  position: absolute;
+}
+
+.gameField .distDisplay{
+  bottom: 1rem;
+  left: 1rem;
+  font-size: .9rem;
+}
+.gameField *{
+  z-index: 2;
+}
+
+.gameField canvas{
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.gameField .stateDisplay{
+  font-size: 3rem;
+  bottom: -100%;
+  color: red;
+  opacity: 0;
+  animation: null .5s 0s forwards ease-in;
+}
+
+@keyframes up{
+  from{
+    bottom: -100%;
+    opacity: 0;
+  }to{
+    bottom: 45%;
+    opacity: 1;
+  }
+}
+
+
+.message {
+  backdrop-filter: blur(3px);
+  background: rgba(0,0,0,0.5);
+}
+
+.message .msg{
+  width: 90%;
+  line-height: 1.5rem;
+  font-family: arial
+}
+
+.message .devPicture{
+  border-radius: 50%;
+  width: 50%;
+  height: 35%;
+  margin: 4rem;
+  border: 2px solid #3CB8E5
+}
+
+.message .dev{
+  position: absolute;
+  bottom: 20px;
+  align-self: center;
+  font-size: .9rem;
+}
+
+.message .typingStick{
+  width: 2px;
+  height: 25px;
+  background: white;
+  display: inline-block;
+  transform: translateY(8px) translateX(5px);
+  margin: 0;
+  animation: blink .5s 0s ease-in-out infinite;
+}
+
+@keyframes blink{
+  to{
+    opacity: 0;
+  }
+}
+
+
+.endSection{
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  text-align: center;
+  line-height: 1.5rem;
+  backdrop-filter: blur(5px);
+}
+
+.endSection .endText{
+  font-size: 1.3rem;
+  text-align: center;
+  width: 80%;
+}
+
+
+.endSection .actions{
+  width: 80%;
+  align-self: center;
+  display: inherit;
+  flex-direction: inherit;
+}
+
+.endSection .endImage{
+  width: 80%;
+  height: 40%;
+  margin: 0;
+  }
+
+.endSection .play,.quit{
+  width: 80%;
+  padding: .5rem;
+  margin: .7rem;
+  text-align: center;
+  border-radius: .5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold
+}
+
+.confirmBar{
+	  position: fixed;
+	  top: 30%;
+	  width: 80%;
+	  min-height: 20%;
+	  background: white;
+	  border-radius: 10px;
+	  flex-direction: column;
+	  align-items: center;
+	  padding: .2rem;
+	  align-self: center;
+	  text-align: center;
+	  border: 2px solid #8CD1EB;
+	  z-index: 5;
+	  align-items: center;
+	  display: none;
+	}
+	
+	
+	
+	.confirmBar .message{
+	  font-size: 1.3rem;
+	  margin-top: 1rem;
+	  color: black;
+	  font-family: Arial, Helvetica, sans-serif;
+	  background: transparent;
+	  font-weight: bold;
+	  text-transform: capitalize;
+	}
+	
+	.confirmBar .actions{
+	  display: flex;
+	  width: 90%;
+	  margin: .5rem;
+	  margin-top: 1.5rem;
+	  align-self: center;
+	  justify-content: space-around;
+	}
+	
+	.confirmBar .actions *{
+	  width: 45%;
+	  border: none;
+	  border-radius: 15px;
+	  padding: .5rem;
+	  color: white;
+	}
+	
+	.yes{
+	  background: #2DBB6A;
+	}
+	
+	.no{
+	  background: #E605A4;
+	}
+	
+	
+	.blurer{
+	  display: none;
+	  width: 100vw;
+	  height: 100vh;
+	  position: absolute;
+	  z-index: 3;
+	  background: rgba(0,0,0,0.7);
+	  backdrop-filter: blur(5px)
+	}
+	
+	
+	.rewardSection {
+	  backdrop-filter: blur(10px);
+	  background: rgba(255,255,255,0.1);
+	  text-align: center;
+	  line-height: 1.5rem;
+	}
+	
+	.rewardSection *{
+	  max-width: 90%;
+	}
+	
+	.rewardSection form{
+	  width: 100%;
+	  display: flex;
+	  flex-direction: column;
+	}
+	
+	form label{
+	  align-self: flex-start;
+	  margin-bottom: .5rem;
+	  margin-top: 1.5rem;
+	  color: #51FF12;
+	}
+	
+	form input{
+	  backdrop-filter: blur(10px);
+	  outline: none;
+	  padding: .5rem;
+	  color: white;
+	}
+	
+	textarea {
+	  height: 100px;
+	  align-self: center;
+	  margin: 2rem;
+	  border-radius: .5rem;
+	  outline: none;
+	  background: transparent;
+	  color: white;
+	  padding: .5rem;
+	  margin-top: .2rem
+	}
+	
+	.submit{
+	  align-self: center;
+	  background: #18FF6F;
+	  font-weight: bold;
+	  width: 100%;
+	  padding: .5rem;
+	  border-radius: .2rem;
+	  border: none;
+	}
+	
+	input,textarea{
+	  border: 1px solid white;
+	  background: transparent;
+	}
+	
+	.submit:active{
+	  background: #A8FFC9;
+	}
+	
+	

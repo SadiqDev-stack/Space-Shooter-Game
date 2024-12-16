@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Space Game</title>
+  <link rel="stylesheet" href="game.css">
+  <link rel="manifest" href="manifest.json">
+	<meta name="theme" content="#42445A">
+	<link rel="shortcut icon" type="image/x-icon" href="./frames/planeFrame.png">
+
+</head>
+<body>
+  
+  
+  <div class="gameHome section">
+    <img src="./frames/planeFrame.png" alt="this is plane frame">
+    <h2>Space Shooter Game</h2>
+    <div class="actions">
+      <button class="play">Play Game</button>
+      <button class="close">Close Game</button>
+    </div>
+    <div class="dev">Stech Dev @copyright 2024</div>
+  </div>
+  
+  <div class="gameLoader section">
+    <img src="./frames/planeFrame.png" alt="this is plane frame">
+    <h2>Space Shooter Game</h2>
+    <div class="loadText">Loading Game: 0%</div>
+    <div class="loader"></div>
+  </div>
+  
+  <div class="gameField section">
+    <nav>
+      <span>Life: ❤️❤️❤️</span>
+      <span>Round: 1</span>
+      <span>Speed: 2 M/S</span>
+    </nav>
+    <div class="stateDisplay">
+      Round 1
+    </div>
+    <canvas></canvas>
+    <div class="distDisplay">distance: 0 meters</div>
+  </div>
+  
+  
+  <div class="message section">
+    <img src="./frames/devFrame.png" alt="this is developed picture" class="devPicture">
+    <div class="msg"><span class="text">Congratulations, you have reached the boss round, you have to defeat the boss to past good look, Tap To Continue</span> <div class="typingStick"></div></div>
+    <div class="dev">Developed By Sadiq Abubakar</div>
+  </div>
+  
+  <div class="endSection section">
+    <div class="endText">You Win The Game, Click To Replay</div>
+    <img class="endImage" src="./frames/asteroidDefeatFrame.png" alt="status frame">
+    
+    <div class="actions">
+    <div class="replay play">Play Again</div>
+    <div class="quit close">Quit Game</div>
+       </div>
+        <div class="dev">Developed By Sadiq Abubakar</div>
+
+  </div>
+ 
+ 	<div class="blurer"></div>
+ 	<div class="confirmBar">
+ 	  <div class="message">Are You Sure You Want To Exit This App</div>
+ 	  <div class="actions">
+ 	    <button class="no clickable">No</button>
+ 	    <button class="yes clickable">Yes</button>
+ 	  </div>
+ 	</div>
+ 	
+ 	
+ 	<div class="rewardSection section">
+ 	  <h3>💥💥Hurray You Finally Defeated The Boss</h3>
+ 	  <p>Looks Like You Are New To This Game So Kindly Submit Your Details And Get Your Reward, Only For Nigerians!!</p>
+ 	  <form action="#">
+ 	  <label for="">Whasupp/Phone Number</label>
+ 	  <input class="phone" type="phone">
+ 	  <label for="">Full Name</label>
+ 	  <input class="fullname" type="text">
+ 	  <label for="">Is This Game Interesting 😉</label>
+ 	  <textarea class="experience" name="" id="" cols="30" rows="10"></textarea>
+ 	  <button class="submit">Submit</button>
+ 	  </form>
+ 	</div>
+
+ <script src="gameMain.js"></script>
+ <script src="sectionController.js"></script>
+ <script src="gameLoader.js"></script>
+ <script src="rewardController.js"></script>
+
+ </body>
+</html>

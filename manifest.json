@@ -1,0 +1,17 @@
+{
+  "name": "Space Shooter Game",
+  "short_name": "Space Game",
+  "start_url": "game.html",
+  "display": "standalone",
+  "background_color": "#42445A",
+  "theme": "lightblue",
+  "icons": [
+    {
+      "src": "./frames/planeFrame.png",
+      "sizes": "400×400",
+      "type": "image/png"
+    }
+  ],
+  "description": "this Game was developed by sadiq Abubakar when he is doing JavaScript project"
+}
+
