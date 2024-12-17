@@ -1,9 +1,14 @@
+
 let gameAssets = [];
 const assets = [
   { type: 'image', src: './frames/bgFrame.png', variable: 'bgFrame' },
   { type: 'image', src: './frames/bulletFrame.png', variable: 'bulletFrame' },
   { type: 'image', src: './frames/planeFrame.png', variable: 'planeFrame' },
   { type: 'image', src: './frames/rockFrame1.png', variable: 'rockFrame' },
+  { type: 'image', src: './frames/rockFrame2.png'},
+  { type: 'image', src: './frames/rockFrame3.png'},
+  { type: 'image', src: './frames/rockFrame4.png'},
+  { type: 'image', src: './frames/rockFrame5.png'},
   { type: 'image', src: './frames/saferPlaneFrame.png', variable: 'saferPlaneFrame' },
   { type: 'image', src: './frames/blastFrame.png', variable: 'blastFrame' },
   { type: 'image', src: './frames/powerFrame.png', variable: 'powerFrame' },
@@ -17,7 +22,6 @@ const assets = [
   { type: 'audio', src: './sounds/hitSound.mp3', variable: 'hitSound'},
   { type: 'audio', src: './sounds/planeHitSound.mp3', variable: 'planeHitSound'},
   { type: 'image', src: './frames/shieldFrame.png', variable: 'shieldFrame'},
-  { type: 'image', src: './frames/devFrame.png'},
   { type: 'image', src: './frames/explosionSpriteFrame.png', variable: 'explosionSpriteFrame'},
   { type: 'audio', src: './sounds/dieExplosionSound.mp3', variable: 'dieExplosionSound'},
   { type: "js", src: "gameMain.js"},
@@ -28,7 +32,7 @@ const assets = [
   { type: "js", src: "sectionController.js"},
   { type: "font", src: "SadiqCyberFont.ttf"},
   { type: "json", src: "manifest.json"},
-  { type: "sw", src: "gameSw.js"},
+  { type: "sw", src: "gameSw.js"}
 ];
 
 assets.forEach(asset => gameAssets.push(asset.src))
