@@ -1,3 +1,4 @@
+
 let toClose = false;
 const closeGame = e => {
   while(true){
@@ -11,6 +12,10 @@ const assets = [
   { type: 'image', src: './frames/bulletFrame.png', variable: 'bulletFrame' },
   { type: 'image', src: './frames/planeFrame.png', variable: 'planeFrame' },
   { type: 'image', src: './frames/rockFrame1.png', variable: 'rockFrame' },
+  { type: 'image', src: './frames/rockFrame2.png', variable: 'rockFrame2'},
+  { type: 'image', src: './frames/rockFrame3.png', variable: 'rockFrame3'},
+  { type: 'image', src: './frames/rockFrame4.png', variable: 'rockFrame4'},
+  { type: 'image', src: './frames/rockFrame5.png', variable: 'rockFrame5'},
   { type: 'image', src: './frames/saferPlaneFrame.png', variable: 'saferPlaneFrame' },
   { type: 'image', src: './frames/blastFrame.png', variable: 'blastFrame' },
   { type: 'image', src: './frames/powerFrame.png', variable: 'powerFrame' },
@@ -25,8 +30,10 @@ const assets = [
   { type: 'audio', src: './sounds/planeHitSound.mp3', variable: 'planeHitSound'},
   { type: 'image', src: './frames/shieldFrame.png', variable: 'shieldFrame'},
   { type: 'image', src: './frames/explosionSpriteFrame.png', variable: 'explosionSpriteFrame'},
-  { type: 'audio', src: './sounds/dieExplosionSound.mp3', variable: 'dieExplosionSound'}
-];
+  { type: 'audio', src: './sounds/dieExplosionSound.mp3', variable: 'dieExplosionSound'},
+ ];
+ 
+
 
 const url = location.href;
 const $ = ele => ele.includes('*') ? 
@@ -173,6 +180,7 @@ assets.forEach(asset => {
   })
     .then(e => loaded++)
     .catch(er => alert(er));
+  
 });
 
   Sections.open(gameLoader)
