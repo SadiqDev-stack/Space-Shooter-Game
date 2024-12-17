@@ -1,7 +1,7 @@
 {
   "name": "Space Shooter Game",
   "short_name": "Space Game",
-  "start_url": "game.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#42445A",
   "theme": "lightblue",
