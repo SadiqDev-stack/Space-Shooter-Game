@@ -175,7 +175,7 @@ assets.forEach(asset => {
         ? (window[variable].onload = e => (hasLoaded = true))
         : (window[variable].onloadeddata = e => (hasLoaded = true));
     } catch (err) {
-      rej('Error Loading ' + err);
+      type == "image" ? window[variable].src = src : window[variable].load()
     }
   })
     .then(e => loaded++)
