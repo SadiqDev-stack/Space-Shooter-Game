@@ -161,8 +161,8 @@ img{
 
 .message .devPicture{
   border-radius: 50%;
-  width: 50%;
-  height: 35%;
+  width: 100px;
+  height: 100px;
   margin: 4rem;
   border: 2px solid #3CB8E5
 }
@@ -364,11 +364,12 @@ img{
 	    width: 30%;
 	  }
 	  
-	  .message img{
-	    width: 30%;
+	  .message .devPicture{
+	    width: 200px;
+	    height: 200px;
 	  }
 	  
-	  .gameField {
+	  .gameField nav, .gameField .distDisplay {
 	    font-size: 1.2rem;
 	  }
 	}
