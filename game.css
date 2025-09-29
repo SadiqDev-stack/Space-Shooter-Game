@@ -359,4 +359,8 @@ img{
 	  background: #A8FFC9;
 	}
 	
-	
+	@media (min-width: 600px){
+	  .gameHome img, .gameLoader img{
+	    width: 30%;
+	  }
+	}
