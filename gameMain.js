@@ -1166,13 +1166,13 @@ const changeUserPosition = e => {
    if(innerWidth >= 600){
      changeUserPosition(e)
    }else{
-     e.touches = [{
-       clientX: e.clientX,
-       clientY: e.clientY
-     }]
-     changeUserPosition(e)
+     changeUserPosition({
+       touches: [{
+         clientX: e.clientX,
+         clientY: e.clientY
+       }]
+     })
    }
-   alert("you moved")
  })
 
 }
