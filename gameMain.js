@@ -1162,8 +1162,8 @@ const changeUserPosition = e => {
 }
 
 
- window.addEventListener(innerWidth >= 600 ? "touchmove" : "mousemove", e => {
-   if(innerWidth >= 600){
+ window.addEventListener(innerWidth <= 600 ? "touchmove" : "mousemove", e => {
+   if(innerWidth <= 600){
      changeUserPosition(e)
    }else{
      changeUserPosition({
