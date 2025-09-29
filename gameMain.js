@@ -1162,7 +1162,12 @@ const changeUserPosition = e => {
 }
 
 if(innerWidth >= 600){
- addEventListener('mousemove', changeUserPosition)
+  addEventListener('mousemove', e => {
+    e.touches = [{
+      ...e
+    }]
+    changeUserPosition(e)
+  })
 }else {
   addEventListener('touchmove', changeUserPosition)
 }

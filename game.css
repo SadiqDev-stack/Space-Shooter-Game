@@ -363,4 +363,12 @@ img{
 	  .gameHome img, .gameLoader img{
 	    width: 30%;
 	  }
+	  
+	  .message img{
+	    width: 30%;
+	  }
+	  
+	  .gameField {
+	    font-size: 1.2rem;
+	  }
 	}
